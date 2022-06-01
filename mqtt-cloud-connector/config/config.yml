@@ -19,7 +19,7 @@ clientSub:
   insecureSkipVerify: true
 
 clientPub:
-  clientId: "cg_publisher"
+  clientId: "cg-edge-01"
   serverAddress: "tcps://a3lnu97tk1lj18-ats.iot.us-east-1.amazonaws.com:8883/mqtt"
   qos: 0
   connectionTimeout: 1
@@ -37,7 +37,7 @@ clientPub:
   privateKeyPath: "./certs/pub/ed215323e8a1250eb12217130bf136db5cda553f478e08aaad21ddd2f2218bcb-private.pem.key"
   insecureSkipVerify: true
   translateTopic: false
-  publishInterval: 250
+  publishInterval: 1000
 
 #LOGS
 logs:
