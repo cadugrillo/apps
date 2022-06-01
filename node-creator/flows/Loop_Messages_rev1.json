@@ -1,0 +1,647 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7e4cca20.588e7c",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "msg.payload = 0",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "1c8465fc.10e082"
+            ]
+        ]
+    },
+    {
+        "id": "b887c6d1.43c668",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 545,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "24b7b946.fcc9b6",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "msg.payload + 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(msg.payload) +1",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 155,
+        "wires": [
+            [
+                "a72010f2.69313",
+                "2d65e6ef5ae2149b"
+            ]
+        ]
+    },
+    {
+        "id": "64d645c5.fe848c",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 940,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a72010f2.69313",
+        "type": "delay",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 505,
+        "y": 155,
+        "wires": [
+            [
+                "1c8465fc.10e082"
+            ]
+        ]
+    },
+    {
+        "id": "d5600b9a.fd9288",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "msg.payload !== 1000",
+        "info": "",
+        "x": 390,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "2d65e6ef5ae2149b",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "cg-connector/sample/1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "cg-connector/sample/1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 220,
+        "wires": [
+            [
+                "dbd5628a2d685b01"
+            ]
+        ]
+    },
+    {
+        "id": "9aa64c9880a2732b",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "cg-data-lake",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b98529854e76fbc6",
+        "x": 1320,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "dbd5628a2d685b01",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Full Payload",
+        "func": "var newPayload = {\"Message\": msg.payload};\nmsg.payload = newPayload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 220,
+        "wires": [
+            [
+                "64d645c5.fe848c",
+                "9aa64c9880a2732b"
+            ]
+        ]
+    },
+    {
+        "id": "2b7db00b4369673c",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "cg-connector/sample/1",
+        "info": "",
+        "x": 130,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "4798699a09aff5c9",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "msg.payload = 0",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 120,
+        "y": 360,
+        "wires": [
+            [
+                "0b35d7126fcbadfd"
+            ]
+        ]
+    },
+    {
+        "id": "1ec9e2fce6bfeb59",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 545,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "31ea06e13ac85caa",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "msg.payload + 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(msg.payload) +1",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 435,
+        "wires": [
+            [
+                "cb7f3fd2d6b78292",
+                "81ca4001713f9575"
+            ]
+        ]
+    },
+    {
+        "id": "dc7bac0f072c2886",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 940,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "cb7f3fd2d6b78292",
+        "type": "delay",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 505,
+        "y": 435,
+        "wires": [
+            [
+                "0b35d7126fcbadfd"
+            ]
+        ]
+    },
+    {
+        "id": "6fe47156ac6faa4b",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "msg.payload !== 1000",
+        "info": "",
+        "x": 390,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "81ca4001713f9575",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "cg-connector/sample/2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "cg-connector/sample/2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 500,
+        "wires": [
+            [
+                "64599d7a44efc9ad"
+            ]
+        ]
+    },
+    {
+        "id": "64599d7a44efc9ad",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Full Payload",
+        "func": "var newPayload = {\"Message\": msg.payload};\nmsg.payload = newPayload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 500,
+        "wires": [
+            [
+                "dc7bac0f072c2886",
+                "9aa64c9880a2732b"
+            ]
+        ]
+    },
+    {
+        "id": "bb718705ee91b5de",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "cg-connector/sample/2",
+        "info": "",
+        "x": 130,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "f591d3faab525fe9",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "msg.payload = 0",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 120,
+        "y": 640,
+        "wires": [
+            [
+                "f987bc3ec37c1841"
+            ]
+        ]
+    },
+    {
+        "id": "e8c5cc2e2d694c2f",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 545,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "c43486b7fb320d7a",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "msg.payload + 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(msg.payload) +1",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 715,
+        "wires": [
+            [
+                "44ce0a3757ad5625",
+                "a7004a5a9e35aef7"
+            ]
+        ]
+    },
+    {
+        "id": "4829928d2cfba44b",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 940,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "44ce0a3757ad5625",
+        "type": "delay",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 505,
+        "y": 715,
+        "wires": [
+            [
+                "f987bc3ec37c1841"
+            ]
+        ]
+    },
+    {
+        "id": "9af6189aa68f2842",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "msg.payload !== 1000",
+        "info": "",
+        "x": 390,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "a7004a5a9e35aef7",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "cg-connector/sample/3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "cg-connector/sample/3",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 780,
+        "wires": [
+            [
+                "0a4173fb4f54fd05"
+            ]
+        ]
+    },
+    {
+        "id": "0a4173fb4f54fd05",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Full Payload",
+        "func": "var newPayload = {\"Message\": msg.payload};\nmsg.payload = newPayload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 780,
+        "wires": [
+            [
+                "4829928d2cfba44b",
+                "9aa64c9880a2732b"
+            ]
+        ]
+    },
+    {
+        "id": "bdf1710f920ad45d",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "cg-connector/sample/3",
+        "info": "",
+        "x": 130,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "1c8465fc.10e082",
+        "type": "while-loop",
+        "z": "f6f2187d.f17ca8",
+        "name": "while-loop",
+        "condi": "msg.payload !== 1000",
+        "limit": false,
+        "limitTime": "",
+        "time": "wl1c8465fc10e082",
+        "timeType": "msg",
+        "x": 310,
+        "y": 80,
+        "wires": [
+            [
+                "b887c6d1.43c668"
+            ],
+            [
+                "24b7b946.fcc9b6"
+            ]
+        ]
+    },
+    {
+        "id": "0b35d7126fcbadfd",
+        "type": "while-loop",
+        "z": "f6f2187d.f17ca8",
+        "name": "while-loop",
+        "condi": "msg.payload !== 1000",
+        "limit": false,
+        "limitTime": "",
+        "time": "wl1c8465fc10e082",
+        "timeType": "msg",
+        "x": 310,
+        "y": 360,
+        "wires": [
+            [
+                "1ec9e2fce6bfeb59"
+            ],
+            [
+                "31ea06e13ac85caa"
+            ]
+        ]
+    },
+    {
+        "id": "f987bc3ec37c1841",
+        "type": "while-loop",
+        "z": "f6f2187d.f17ca8",
+        "name": "while-loop",
+        "condi": "msg.payload !== 1000",
+        "limit": false,
+        "limitTime": "",
+        "time": "wl1c8465fc10e082",
+        "timeType": "msg",
+        "x": 310,
+        "y": 640,
+        "wires": [
+            [
+                "e8c5cc2e2d694c2f"
+            ],
+            [
+                "c43486b7fb320d7a"
+            ]
+        ]
+    },
+    {
+        "id": "b98529854e76fbc6",
+        "type": "mqtt-broker",
+        "name": "cg-datalake",
+        "broker": "datalake",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    }
+]
