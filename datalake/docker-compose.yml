@@ -1,0 +1,26 @@
+version: "3.3"
+services:
+  datalake:
+    image: eclipse-mosquitto
+    container_name: datalake
+    restart: always
+    ports:
+      - 1883
+    volumes:
+      - type: bind
+        source: ./config
+        target: /mosquitto/config
+        read_only: true
+      - type: bind
+        source: ./data
+        target: /mosquitto/data
+      - type: bind
+        source: ./log
+        target: /mosquitto/log
+    networks:
+      - cg-edge
+
+networks:
+   cg-edge:
+    external: true
+
