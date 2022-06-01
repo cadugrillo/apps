@@ -33,8 +33,8 @@ clientPub:
   password: ""
   tlsConn: true
   rootCAPath: "./certs/pub/AmazonRootCA1.pem"
-  clientKeyPath: "./certs/pub/b4aa6501aafb00f805d710111d59ef07ee19e8affc6997a1a5c187b868b7aa0b-certificate.pem.crt"
-  privateKeyPath: "./certs/pub/b4aa6501aafb00f805d710111d59ef07ee19e8affc6997a1a5c187b868b7aa0b-private.pem.key"
+  clientKeyPath: "./certs/pub/ed215323e8a1250eb12217130bf136db5cda553f478e08aaad21ddd2f2218bcb-certificate.pem.crt"
+  privateKeyPath: "./certs/pub/ed215323e8a1250eb12217130bf136db5cda553f478e08aaad21ddd2f2218bcb-private.pem.key"
   insecureSkipVerify: true
   translateTopic: false
   publishInterval: 250
