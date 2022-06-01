@@ -1,0 +1,1 @@
+docker run -dp 1880:1880 -v myNodeREDdata:/data --name nodecreator --restart always --network cg-edge nodered/node-red
