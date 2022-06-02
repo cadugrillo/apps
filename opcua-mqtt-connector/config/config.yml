@@ -213,21 +213,3 @@ nodesToRead:
     - 
         name: "UnitSpeedLessThan10pcSNL"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.UnitSpeedLessThan10pcSNL"
-    - 
-        name: "UnitSpeedGreatThan90pcSNL"
-        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.UnitSpeedGreatThan90pcSNL"
-    - 
-        name: "UnitSpeedGreatThanOverSpeed"
-        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.UnitSpeedGreatThanOverSpeed"
-    - 
-        name: "LineBreakerClosed"
-        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.LineBreakerClosed"
-    - 
-        name: "ExcSystFault"
-        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.ExcSystFault"
-    - 
-        name: "NormalStopButton"
-        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.NormalStopButton"
-    - 
-        name: "MaintenanceSwitch"
-        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.MaintenanceSwitch"        
