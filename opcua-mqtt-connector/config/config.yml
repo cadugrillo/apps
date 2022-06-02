@@ -336,3 +336,6 @@ nodesToRead:
     - 
         name: "ExcSystReady"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.ExcSystReady"
+    - 
+        name: "MPTOilTempHigh"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.MPTOilTempHigh"
