@@ -237,3 +237,30 @@ nodesToRead:
     - 
         name: "GenVibrationHorizontal"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.GenVibrationHorizontal"
+    - 
+        name: "ExcSystGroundFault"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.ExcSystGroundFault"
+    - 
+        name: "TurbVibrationNormalStop"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.TurbVibrationNormalStop"
+    - 
+        name: "TurbVibrationAlarm"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.TurbVibrationAlarm"
+    - 
+        name: "UnitMWhPulse"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.UnitMWhPulse"
+    - 
+        name: "Spare_ENET2_DIM5_BYTE0_BIT5"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.Spare_ENET2_DIM5_BYTE0_BIT5"
+    - 
+        name: "TurbBearSealWaterFlowLow"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.TurbBearSealWaterFlowLow"
+    - 
+        name: "TurbGuideBearTempHigh"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.TurbGuideBearTempHigh"
+    - 
+        name: "PackBoxCoolWaterFlowLow"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.PackBoxCoolWaterFlowLow"
+    - 
+        name: "GenCoupEndGuideBearTempHigh"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.GenCoupEndGuideBearTempHigh"
