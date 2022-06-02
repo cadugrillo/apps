@@ -321,3 +321,15 @@ nodesToRead:
     - 
         name: "BrakesOn"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.BrakesOn"
+    - 
+        name: "CoolWaterSystPressureLow"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.CoolWaterSystPressureLow"
+    - 
+        name: "Fire"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.Fire"
+    - 
+        name: "Intrusion"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.Intrusion"
+    - 
+        name: "PlantSumpWaterLevelHigh"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.PlantSumpWaterLevelHigh"
