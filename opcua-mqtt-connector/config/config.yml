@@ -207,3 +207,9 @@ nodesToRead:
     - 
         name: "LineBreakerPowerFailure"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.LineBreakerPowerFailure"        
+    - 
+        name: "UnitSpeedGreatThanShaftCreep"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.UnitSpeedGreatThanShaftCreep"
+    - 
+        name: "UnitSpeedGreatThanOverSpeed2"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.UnitSpeedGreatThanOverSpeed2"
