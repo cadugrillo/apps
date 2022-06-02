@@ -198,7 +198,7 @@ nodesToRead:
     - 
         name: "LockoutRelay86H"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.LockoutRelay86H"
-- 
+    - 
         name: "StationDCOvervoltage"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.StationDCOvervoltage"
     - 
