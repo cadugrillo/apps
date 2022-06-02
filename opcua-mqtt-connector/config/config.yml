@@ -339,3 +339,6 @@ nodesToRead:
     - 
         name: "MPTOilTempHigh"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.MPTOilTempHigh"
+    - 
+        name: "Spare_ENET2_DIM7_BYTE0_BIT5"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.Spare_ENET2_DIM7_BYTE0_BIT5"
