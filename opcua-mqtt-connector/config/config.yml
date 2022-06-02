@@ -219,3 +219,9 @@ nodesToRead:
     - 
         name: "UnitSpeedGreatThan90pcSNL"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.UnitSpeedGreatThan90pcSNL"
+    - 
+        name: "UnitSpeedGreatThanOverSpeed"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.UnitSpeedGreatThanOverSpeed"
+    - 
+        name: "LineBreakerClosed"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.LineBreakerClosed"
