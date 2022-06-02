@@ -315,3 +315,9 @@ nodesToRead:
     - 
         name: "HPUOilPressureLow"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.HPUOilPressureLow"
+    - 
+        name: "Spare_ENET2_DIM6_BYTE1_BIT3"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.Spare_ENET2_DIM6_BYTE1_BIT3"
+    - 
+        name: "BrakesOn"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.BrakesOn"
