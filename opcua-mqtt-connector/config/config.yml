@@ -204,7 +204,7 @@ nodesToRead:
     - 
         name: "StationDCUndervoltage"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.StationDCUndervoltage"
-- 
+    - 
         name: "LineBreakerPowerFailure"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.LineBreakerPowerFailure"
     - 
