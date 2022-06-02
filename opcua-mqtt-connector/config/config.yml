@@ -340,5 +340,5 @@ nodesToRead:
         name: "MPTOilTempHigh"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.MPTOilTempHigh"
     - 
-        name: "CoolWaterSystPumpFailure"
-        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.CoolWaterSystPumpFailure"
+        name: "VoltageImbalance"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.VoltageImbalance"
