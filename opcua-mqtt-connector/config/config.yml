@@ -201,6 +201,6 @@ nodesToRead:
     - 
         name: "StationDCOvervoltage"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.StationDCOvervoltage"
- - 
+    - 
         name: "StationDCUndervoltage"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.StationDCUndervoltage"
