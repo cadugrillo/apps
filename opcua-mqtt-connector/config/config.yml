@@ -225,3 +225,15 @@ nodesToRead:
     - 
         name: "LineBreakerClosed"
         nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.LineBreakerClosed"
+    - 
+        name: "ExcSystFault"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.ExcSystFault"
+    - 
+        name: "NormalStopButton"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.NormalStopButton"
+    - 
+        name: "MaintenanceSwitch"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.MaintenanceSwitch"
+    - 
+        name: "GenVibrationHorizontal"
+        nodeID: "ns=4;s=|var|CODESYS Control for emPC-A-iMX6 SL.Application.DB1.GenVibrationHorizontal"
