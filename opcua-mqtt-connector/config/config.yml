@@ -3,7 +3,7 @@ opcUaClient:
   clientId: "cg_opcua_client"
   serverAddress: "opc.tcp://172.24.50.10:4840"
   pollInterval: 10
-  maxAge: 2000
+  maxAge: 5000
 #MQTT CLIENT CONFIGURATIONS
 clientPub:
   clientId: "cg_opcua_publisher"
