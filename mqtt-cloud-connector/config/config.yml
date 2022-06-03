@@ -51,6 +51,7 @@ logs:
 topicsSub:
   topic:
     - "cg-opcua-publisher/#"
+    - "cg-connector/sample/#"
 
 #TOPICS TO PUBLISH TO
 topicsPub:
