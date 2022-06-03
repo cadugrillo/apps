@@ -20,8 +20,8 @@ clientSub:
 
 clientPub:
   clientId: "cg-edge-01"
-  serverAddress: "tcp://test.mosquitto.org:1883"
-  qos: 0
+  serverAddress: "tcps://a3lnu97tk1lj18-ats.iot.us-east-1.amazonaws.com:8883/mqtt"
+  qos: 1
   connectionTimeout: 1
   writeTimeout: 1
   keepAlive: 30
@@ -31,7 +31,7 @@ clientPub:
   orderMaters: false
   userName: ""
   password: ""
-  tlsConn: false
+  tlsConn: true
   rootCAPath: "./certs/pub/AmazonRootCA1.pem"
   clientKeyPath: "./certs/pub/ed215323e8a1250eb12217130bf136db5cda553f478e08aaad21ddd2f2218bcb-certificate.pem.crt"
   privateKeyPath: "./certs/pub/ed215323e8a1250eb12217130bf136db5cda553f478e08aaad21ddd2f2218bcb-private.pem.key"
