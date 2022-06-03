@@ -2,7 +2,7 @@
 opcUaClient:
   clientId: "cg_opcua_client"
   serverAddress: "opc.tcp://172.24.50.10:4840"
-  pollInterval: 10
+  pollInterval: 60
   maxAge: 2000
   maxSignalsPerRead: 100
   minTimeBetweenRead: 250
