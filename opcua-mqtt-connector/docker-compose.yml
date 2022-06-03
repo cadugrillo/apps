@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   opcua-mqtt-connector:
-    image: cadugrillo/opcua-mqtt-connector:1.0
+    image: cadugrillo/opcua-mqtt-connector:1.2
     container_name: opcua-mqtt-connector
     restart: always
     volumes:
