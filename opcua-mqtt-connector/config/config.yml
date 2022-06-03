@@ -5,7 +5,7 @@ opcUaClient:
   pollInterval: 10
   maxAge: 2000
   maxSignalsPerRead: 100
-  minTimeBetweenRead: 1000
+  minTimeBetweenRead: 250
 #MQTT CLIENT CONFIGURATIONS
 clientPub:
   clientId: "cg_opcua_publisher"
