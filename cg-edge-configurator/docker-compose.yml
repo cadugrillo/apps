@@ -5,7 +5,8 @@ services:
     image: cadugrillo/cg-edge-conf-api:1.1
     container_name: cg-edge-conf-api
     restart: always
-    volumes:
+    ports:
+      - 4343
     volumes:
       - type: bind
         source: /var/run/docker.sock
