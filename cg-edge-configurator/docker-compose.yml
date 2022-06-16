@@ -4,12 +4,8 @@ services:
   cg-edge-conf-api:
     image: cadugrillo/cg-edge-conf-api:1.3
     container_name: cg-edge-conf-api
-    privileged: true
     restart: always
     volumes:
-      - type: bind
-        source: /var/run/systemd
-        target: /var/run/systemd
       - type: bind
         source: /var/run/docker.sock
         target: /var/run/docker.sock
