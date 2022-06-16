@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   cg-edge-conf-api:
-    image: cadugrillo/cg-edge-conf-api:1.2
+    image: cadugrillo/cg-edge-conf-api:1.3
     container_name: cg-edge-conf-api
     privileged: true
     restart: always
