@@ -5,8 +5,8 @@ services:
     image: cadugrillo/cg-edge-conf-api:1.3
     container_name: cg-edge-conf-api
     restart: always
-    ports:
-      - 4383
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - type: bind
         source: /var/run/docker.sock
