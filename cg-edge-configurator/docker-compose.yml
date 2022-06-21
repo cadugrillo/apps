@@ -17,9 +17,7 @@ services:
       - type: bind
         source: /home/edge/apps
         target: /apps
-      - type: bind
-        source: cgedgeusers
-        target: /users  
+      - cgedgeusers:/users  
     networks:
       - cg-conf
 
