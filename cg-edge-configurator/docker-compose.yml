@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   cg-edge-conf-api:
-    image: cadugrillo/cg-edge-conf-api:1.3
+    image: cadugrillo/cg-edge-conf-api:1.4
     container_name: cg-edge-conf-api
     restart: always
     extra_hosts:
@@ -17,11 +17,14 @@ services:
       - type: bind
         source: /home/edge/apps
         target: /apps
+      - type: bind
+        source: cgedgeusers
+        target: /users  
     networks:
       - cg-conf
 
   cg-edge-conf:
-    image: cadugrillo/cg-edge-conf:1.3
+    image: cadugrillo/cg-edge-conf:1.4
     container_name: cg-edge-conf
     restart: always
     ports:
