@@ -33,3 +33,6 @@ services:
 networks:
    cg-conf:
     external: true
+    
+volumes:
+  cgedgeusers:
