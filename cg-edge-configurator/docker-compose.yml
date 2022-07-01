@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   cg-edge-conf-api:
-    image: cadugrillo/cg-edge-conf-api:1.6
+    image: cadugrillo/cg-edge-conf-api:1.7
     container_name: cg-edge-conf-api
     restart: always
     extra_hosts:
@@ -22,11 +22,23 @@ services:
       - cg-conf
 
   cg-edge-conf:
-    image: cadugrillo/cg-edge-conf:1.6
+    image: cadugrillo/cg-edge-conf:1.7
     container_name: cg-edge-conf
     restart: always
     ports:
       - 80:80
+    networks:
+      - cg-conf
+  
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=cgEdgeRoot
+      - MYSQL_DATABASE=cgEdge
+    volumes:
+      - mysql-data:/var/lib/mysql
     networks:
       - cg-conf
 
@@ -36,3 +48,4 @@ networks:
     
 volumes:
   cgedgeusers:
+  mysql-data:
