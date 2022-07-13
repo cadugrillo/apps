@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   cg-edge-conf-api:
-    image: cadugrillo/cg-edge-conf-api:1.7
+    image: cadugrillo/cg-edge-conf-api:1.8
     container_name: cg-edge-conf-api
     restart: always
     extra_hosts:
@@ -16,13 +16,12 @@ services:
         target: /etc/network 
       - type: bind
         source: /home/edge/apps
-        target: /apps
-      - cgedgeusers:/users  
+        target: /apps  
     networks:
       - cg-conf
 
   cg-edge-conf:
-    image: cadugrillo/cg-edge-conf:1.7
+    image: cadugrillo/cg-edge-conf:1.8
     container_name: cg-edge-conf
     restart: always
     ports:
@@ -47,5 +46,4 @@ networks:
     external: true
     
 volumes:
-  cgedgeusers:
   mysql-data:
