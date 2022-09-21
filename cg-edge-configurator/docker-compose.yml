@@ -2,21 +2,22 @@ version: "3.3"
 
 services:
   cg-edge-conf-api:
-    image: cadugrillo/cg-edge-conf-api:1.9
+    image: cadugrillo/cg-edge-conf-api:2.0
     container_name: cg-edge-conf-api
     restart: always
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
+      - cgedge-data:/database
       - type: bind
         source: /var/run/docker.sock
         target: /var/run/docker.sock
       - type: bind
         source: /etc/network
-        target: /etc/network 
+        target: /etc/network
       - type: bind
         source: /home/edge/apps
-        target: /apps  
+        target: /apps
     networks:
       - cg-conf
 
@@ -28,22 +29,10 @@ services:
       - 80:80
     networks:
       - cg-conf
-  
-  mysql:
-    image: mysql:latest
-    container_name: mysql
-    restart: always
-    environment:
-      - MYSQL_ROOT_PASSWORD=cgEdgeRoot
-      - MYSQL_DATABASE=cgEdge
-    volumes:
-      - mysql-data:/var/lib/mysql
-    networks:
-      - cg-conf
 
 networks:
    cg-conf:
     external: true
-    
+
 volumes:
-  mysql-data:
+  cgedge-data:
