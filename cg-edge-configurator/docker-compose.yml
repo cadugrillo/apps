@@ -22,7 +22,7 @@ services:
       - cg-conf
 
   cg-edge-conf:
-    image: cadugrillo/cg-edge-conf:1.9
+    image: cadugrillo/cg-edge-conf:2.0
     container_name: cg-edge-conf
     restart: always
     ports:
