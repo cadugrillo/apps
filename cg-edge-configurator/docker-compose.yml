@@ -17,9 +17,7 @@ services:
       - type: bind
         source: /etc/network
         target: /etc/network
-      - type: bind
-        source: /home/edge/apps
-        target: /apps
+      - cgedge-apps:/apps
     networks:
       - cg-conf
 
@@ -36,7 +34,8 @@ services:
 
 networks:
    cg-conf:
-    external: true
+      name: cg-conf
 
 volumes:
   cgedge-data:
+  cgedge-apps:
