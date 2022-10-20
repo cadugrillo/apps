@@ -1,10 +1,12 @@
-version: "3.3"
+version: "3.7"
 
 services:
   cg-edge-conf-api:
     image: cadugrillo/cg-edge-conf-api:2.1
     container_name: cg-edge-conf-api
     restart: always
+    mem_limit: 1024m
+    cpus: 0.5
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
@@ -25,6 +27,8 @@ services:
     image: cadugrillo/cg-edge-conf:2.1
     container_name: cg-edge-conf
     restart: always
+    mem_limit: 1024m
+    cpus: 0.5
     ports:
       - 80:80
     networks:
