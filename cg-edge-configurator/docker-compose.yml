@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   cg-edge-conf-api:
-    image: cadugrillo/cg-edge-conf-api:2.1
+    image: cadugrillo/cg-edge-conf-api:2.2
     container_name: cg-edge-conf-api
     restart: always
     mem_limit: 1024m
@@ -17,18 +17,21 @@ services:
       - type: bind
         source: /etc/network
         target: /etc/network
-      - cgedge-apps:/apps
+      - type: bind
+        source: /home/edge/apps
+        target: /apps
     networks:
       - cg-conf
 
   cg-edge-conf:
-    image: cadugrillo/cg-edge-conf:2.1
+    image: cadugrillo/cg-edge-conf:2.2
     container_name: cg-edge-conf
     restart: always
     mem_limit: 1024m
     cpus: 0.5
     ports:
       - 80:80
+      - 443:443
     networks:
       - cg-conf
 
@@ -38,4 +41,6 @@ networks:
 
 volumes:
   cgedge-data:
-  cgedge-apps:
+
+   
+
