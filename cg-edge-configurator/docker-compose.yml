@@ -30,6 +30,7 @@ services:
     mem_limit: 1024m
     cpus: 0.5
     ports:
+      - 80:80
       - 443:443
     networks:
       - cg-conf
