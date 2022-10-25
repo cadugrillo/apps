@@ -11,7 +11,7 @@ services:
       - "host.docker.internal:host-gateway"
     volumes:
       - cgedge-database:/database
-      - cgedge-apps:/apps
+      # - cgedge-apps:/apps
       - type: bind
         source: /var/run/docker.sock
         target: /var/run/docker.sock
