@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   cg-edge-conf-api:
-    image: cadugrillo/cg-edge-conf-api:2.2
+    image: cadugrillo/cg-edge-conf-api:2.3
     container_name: cg-edge-conf-api
     restart: always
     mem_limit: 1024m
@@ -25,7 +25,7 @@ services:
       - cg-conf
 
   cg-edge-conf:
-    image: cadugrillo/cg-edge-conf:2.2
+    image: cadugrillo/cg-edge-conf:2.3
     container_name: cg-edge-conf
     restart: always
     mem_limit: 1024m
